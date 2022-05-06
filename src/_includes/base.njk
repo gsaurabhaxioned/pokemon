@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Site</title>
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+</head>
+<body>
+<header>
+<div class="wrapper">
+ <img class="logo" src="../images/logo.jpeg">
+     </div>
+</header>
+<main>
+    <div class="wrapper">
+    <ul class="pokemon">
+    {{content | safe}}
+    </ul>
+    </div>
+</main>
+<footer>
+    <div class="pagination">
+    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
+    {% for i in range(1, ((pokemon.length/8))) -%}
+         <a href="/{{i}}">{{i}}</a>
+    {%- endfor %}
+        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next</a>{% else %}next{% endif %}
+</div>
+</footer>
+<script type="module" src="../scripts/main.js"></script>
+</body>
+</html>
