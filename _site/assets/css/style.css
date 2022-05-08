@@ -196,6 +196,7 @@ align-items: center;
   background-color: #ffff00;
   color: #ff0000;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /*main styling end */
