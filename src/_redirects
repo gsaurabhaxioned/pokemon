@@ -1,1 +1,5 @@
-/pokeinfo.html 200 /pokeinfo  
+---
+permalink: _redirects
+---
+
+/pokeinfo /pokeinfo.html 200  
