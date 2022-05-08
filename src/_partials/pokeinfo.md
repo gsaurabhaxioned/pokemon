@@ -1,4 +1,4 @@
 ---
 layout: pokeinfo.njk
-permalink: "pokeinfo.html"
+permalink: "pokeinfo"
 ---

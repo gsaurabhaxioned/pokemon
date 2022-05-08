@@ -46,5 +46,8 @@ if(document.querySelector(".pokemon-details")) {
     document.querySelector(".speed").innerHTML = poke_info.speed;
     document.querySelector(".poke-img img").setAttribute("src",poke_info.img);
 
+    document.querySelector(".back_btn").addEventListener("click",()=>{
+        history.back();
+    })
 }
 

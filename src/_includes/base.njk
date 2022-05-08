@@ -22,11 +22,11 @@
 </main>
 <footer>
     <div class="pagination">
-    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
-    {% for i in range(1,((pokemon.length/8 + 1))) -%}
-         <a href="/{{i}}">{{i}}</a>
-    {%- endfor %}
-        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">next</a>{% else %}next{% endif %}
+{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">previous</a>{% else %}previous{% endif %}
+{% for pageEntry in pagination.pages %}
+    <a href="{{pagination.hrefs[loop.index0]}}">{{loop.index}}</a>
+{% endfor %}
+{% if pagination.href.next %}<a href="{{ pagination.href.next }}">next</a>{% else %}next{% endif %}
 </div>
 </footer>
 <script type="module" src="../scripts/main.js"></script>
